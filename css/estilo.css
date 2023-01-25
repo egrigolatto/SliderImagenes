@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color:silver;
+    background-image:
+    radial-gradient(circle at 100% 150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0    150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50%  100%, white 10%, silver 10%, silver 23%, white 23%, white 30%, silver 30%, silver 43%, white 43%, white 50%, silver 50%, silver 63%, white 63%, white 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent),
+    radial-gradient(circle at 0    50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent);
+    background-size: 100px 50px;
+}
+.contenedor{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px #fff,
+                0 15px 50px;
+    position: relative;
+}
+.slider{
+    display: flex;
+    width: 400%;
+    height: 400px;
+    /* pongo 400% porque tengo 4 imagenes */
+    /* entonces de ese 400% cada imagen va a ocupar un 100% */
+    /* si son 5 img 500% y asi */
+    margin-left: -100%;
+}
+.sliderSection{
+    width: 100%;
+
+}
+.sliderImg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sliderBtn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sliderBtn:hover{
+    background: #fff;
+}
+.sliderBtnLeft{
+    left: 10px;
+}
+.sliderBtnRight{
+    right: 10px;
+}
